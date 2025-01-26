@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_Calculator</title>
+</head>
+<body>
+    <script>  
+  
+        let result;
+        var display;
+        
+        
+            const number1 = parseFloat(prompt('Enter the first number: '));
+        
+            if (isNaN(number1)) {
+                {
+                    display = ("Make sure you write your first number is in standard form");
+                    window.alert(display);
+                    process.exit();
+                }
+            }
+        
+            const operator = prompt('Enter operator to perform the calculation ( either +, -, * or / ): ');
+        
+            if (operator != '+') {
+                if (operator != '-') {
+                    if (operator != '/') {
+                        if (operator != '*') {
+                            display = ("You didn't enter a valid operation");
+                            window.alert(display);
+                            process.exit();
+                        }
+                    }
+                }
+            }
+        
+            const number2 = parseFloat(prompt('Enter the second number: '));
+        
+            if (isNaN(number2)) {
+                display = ("Make sure you write your Second number is in standard form")
+                window.alert(display);
+                process.exit();
+            }
+        
+            if (!(isNaN(number1))) {
+                if (!(isNaN(number2))) {
+                    if (operator == '+') {
+                        result = number1 + number2;
+                        display = (" Result is " + result);
+                    }
+                    else if (operator == '-') {
+                        result = number1 - number2;
+                        display = (" Result is " + result);
+                    }
+                    else if (operator == '*') {
+                        result = number1 * number2;
+                        display = (" Result is " + result);
+                    }
+                    else if (operator == '/') {
+                        result = number1 / number2;
+                        display = (" Result is " + result);
+                    }
+                }
+            }
+        window.alert(display);  
+        </script>  
+</body>
+</html>
